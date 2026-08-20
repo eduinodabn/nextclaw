@@ -1,0 +1,17 @@
+{
+  "pid": 6114,
+  "startedAt": "2026-08-20T03:53:03.418Z",
+  "uiUrl": "http://127.0.0.1:18891",
+  "apiUrl": "http://127.0.0.1:18891/api",
+  "uiHost": "0.0.0.0",
+  "uiPort": 18891,
+  "remote": {
+    "enabled": false,
+    "state": "disabled",
+    "localOrigin": "http://127.0.0.1:18891",
+    "lastError": null,
+    "lastConnectedAt": null,
+    "mode": "service",
+    "updatedAt": "2026-08-20T03:53:03.421Z"
+  }
+}
