@@ -1,0 +1,273 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.nextclaw/workspace",
+      "model": "",
+      "engine": "native",
+      "engineConfig": {},
+      "thinkingDefault": "off",
+      "models": {},
+      "contextTokens": 200000,
+      "maxToolIterations": 1000
+    },
+    "runtimes": {
+      "entries": {}
+    },
+    "context": {
+      "bootstrap": {
+        "files": [
+          "AGENTS.md",
+          "SOUL.md",
+          "USER.md",
+          "IDENTITY.md",
+          "TOOLS.md",
+          "BOOT.md",
+          "BOOTSTRAP.md"
+        ],
+        "minimalFiles": [
+          "AGENTS.md",
+          "SOUL.md",
+          "TOOLS.md",
+          "IDENTITY.md"
+        ],
+        "perFileChars": 4000,
+        "totalChars": 12000
+      },
+      "memory": {
+        "enabled": true,
+        "maxChars": 8000
+      }
+    },
+    "learningLoop": {
+      "enabled": false,
+      "toolCallThreshold": 15
+    },
+    "list": []
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": false,
+      "bridgeUrl": "ws://localhost:3001",
+      "allowFrom": []
+    },
+    "telegram": {
+      "enabled": false,
+      "token": "",
+      "allowFrom": [],
+      "proxy": null,
+      "ackReaction": "👀",
+      "ackReactionScope": "all",
+      "accountId": "default",
+      "dmPolicy": "open",
+      "groupPolicy": "open",
+      "groupAllowFrom": [],
+      "streaming": "partial",
+      "requireMention": false,
+      "mentionPatterns": [],
+      "groups": {}
+    },
+    "discord": {
+      "enabled": false,
+      "token": "",
+      "allowBots": false,
+      "allowFrom": [],
+      "gatewayUrl": "wss://gateway.discord.gg/?v=10&encoding=json",
+      "intents": 37377,
+      "proxy": null,
+      "mediaMaxMb": 8,
+      "streaming": "off",
+      "draftChunk": {
+        "minChars": 200,
+        "maxChars": 800,
+        "breakPreference": "paragraph"
+      },
+      "textChunkLimit": 2000,
+      "accountId": "default",
+      "dmPolicy": "open",
+      "groupPolicy": "open",
+      "groupAllowFrom": [],
+      "requireMention": false,
+      "mentionPatterns": [],
+      "groups": {}
+    },
+    "feishu": {
+      "enabled": false,
+      "name": "",
+      "appId": "",
+      "appSecret": "",
+      "encryptKey": "",
+      "verificationToken": "",
+      "domain": "feishu",
+      "allowFrom": [],
+      "dmPolicy": "open",
+      "groupPolicy": "open",
+      "groupAllowFrom": [],
+      "requireMention": false,
+      "mentionPatterns": [],
+      "groups": {},
+      "textChunkLimit": 4000,
+      "mediaMaxMb": 20,
+      "threadSession": false,
+      "extra": {},
+      "accounts": {}
+    },
+    "dingtalk": {
+      "enabled": false,
+      "clientId": "",
+      "clientSecret": "",
+      "allowFrom": []
+    },
+    "wecom": {
+      "enabled": false,
+      "corpId": "",
+      "agentId": "",
+      "secret": "",
+      "token": "",
+      "callbackPort": 18890,
+      "callbackPath": "/wecom/callback",
+      "allowFrom": []
+    },
+    "email": {
+      "enabled": false,
+      "consentGranted": false,
+      "imapHost": "",
+      "imapPort": 993,
+      "imapUsername": "",
+      "imapPassword": "",
+      "imapMailbox": "INBOX",
+      "imapUseSsl": true,
+      "smtpHost": "",
+      "smtpPort": 587,
+      "smtpUsername": "",
+      "smtpPassword": "",
+      "smtpUseTls": true,
+      "smtpUseSsl": false,
+      "fromAddress": "",
+      "autoReplyEnabled": true,
+      "pollIntervalSeconds": 30,
+      "markSeen": true,
+      "maxBodyChars": 12000,
+      "subjectPrefix": "Re: ",
+      "allowFrom": []
+    },
+    "slack": {
+      "enabled": false,
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "botToken": "",
+      "appToken": "",
+      "userTokenReadOnly": true,
+      "allowBots": false,
+      "groupPolicy": "mention",
+      "groupAllowFrom": [],
+      "dm": {
+        "enabled": true,
+        "policy": "open",
+        "allowFrom": []
+      }
+    },
+    "qq": {
+      "enabled": false,
+      "appId": "",
+      "secret": "",
+      "markdownSupport": false,
+      "allowFrom": []
+    },
+    "weixin": {
+      "enabled": false
+    }
+  },
+  "providers": {
+    "nextclaw": {
+      "enabled": false,
+      "displayName": "",
+      "apiKey": "nc_free_YMpzyylWZugGQmOEE4sVZ3etYEUk9bmt",
+      "apiBase": null,
+      "extraHeaders": null,
+      "wireApi": "auto",
+      "models": [],
+      "modelConfig": {}
+    }
+  },
+  "search": {
+    "provider": "bocha",
+    "enabledProviders": [
+      "bocha"
+    ],
+    "defaults": {
+      "maxResults": 5
+    },
+    "providers": {
+      "bocha": {
+        "apiKey": "",
+        "baseUrl": "https://api.bocha.cn/v1/web-search",
+        "summary": true,
+        "freshness": "noLimit",
+        "docsUrl": "https://open.bocha.cn"
+      },
+      "tavily": {
+        "apiKey": "",
+        "baseUrl": "https://api.tavily.com/search",
+        "searchDepth": "basic",
+        "includeAnswer": false
+      },
+      "brave": {
+        "apiKey": "",
+        "baseUrl": "https://api.search.brave.com/res/v1/web/search"
+      }
+    }
+  },
+  "mcp": {
+    "servers": {}
+  },
+  "bindings": [],
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "gateway": {
+    "host": "0.0.0.0",
+    "port": 18790
+  },
+  "ui": {
+    "enabled": false,
+    "host": "0.0.0.0",
+    "port": 55667,
+    "open": false,
+    "auth": {
+      "enabled": false,
+      "username": "",
+      "passwordHash": "",
+      "passwordSalt": ""
+    },
+    "ncp": {
+      "runtimes": {}
+    }
+  },
+  "remote": {
+    "enabled": false,
+    "deviceName": "",
+    "platformApiBase": "",
+    "autoReconnect": true
+  },
+  "companion": {
+    "enabled": false
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "apiKey": "",
+        "maxResults": 5
+      }
+    },
+    "exec": {
+      "timeout": 60
+    },
+    "restrictToWorkspace": false
+  },
+  "secrets": {
+    "enabled": true,
+    "defaults": {},
+    "providers": {},
+    "refs": {}
+  }
+}
